@@ -23,6 +23,39 @@ public class KeycloakSmsAuthenticatorCredentialProvider implements CredentialPro
 
     private final KeycloakSession session;
 
+    @Override
+    public String getType() {
+        return null;
+    }
+
+    @Override
+    public CredentialModel createCredential(RealmModel realmModel, UserModel userModel,
+        CredentialModel credentialModel) {
+        return null;
+    }
+
+    @Override
+    public boolean deleteCredential(RealmModel realmModel, UserModel userModel, String s) {
+        return false;
+    }
+
+    @Override
+    public CredentialModel getCredentialFromModel(CredentialModel credentialModel) {
+        return null;
+    }
+
+    @Override
+    public CredentialTypeMetadata getCredentialTypeMetadata(
+        CredentialTypeMetadataContext credentialTypeMetadataContext) {
+        return null;
+    }
+
+    @Override
+    public CredentialModel getDefaultCredential(KeycloakSession session, RealmModel realm,
+        UserModel user) {
+        return null;
+    }
+
     public KeycloakSmsAuthenticatorCredentialProvider(KeycloakSession session) {
         this.session = session;
     }
